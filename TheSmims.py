@@ -3,7 +3,7 @@ import random
 class Human:
     def __init__(self, name="Human"):
         self.name = name
-        self.money = 1000
+        self.money = 350
         self.gladness = 25
         self.hunger = 40
         self.home = Home()
@@ -21,7 +21,7 @@ class Human:
         if not self.car.drive():
             print("Car repair")
             self.car.repair()
-            self.money -= 500
+            self.money -= 150
         else:
             print("Driving to your office...")
             print("You're working")
@@ -44,12 +44,12 @@ class Human:
     def shopping(self, type):
         if type == "Buy food":
             print("Buying food")
-            self.money -= 200
+            self.money -= 100
             self.home.food += 50
         elif type == "Fuel":
             print("Fueling")
             self.money -= 75
-            self.car.fuel += 50
+            self.car.fuel += 45
     
     def is_alive(self):
         if self.hunger <= 0:
@@ -78,25 +78,25 @@ class Human:
 class Car:
    def __init__(self):
        self.fuel = 50
-       self.strength = 40
+       self.strength = 5
    def drive(self):
-       if self.fuel > 5 and self.strength > 5:
+       if self.fuel > 5 and self.strength > 1:
            self.fuel -= 5
            self.strength -= 1
            return True
        return False
    def repair(self):
-       self.strength += 35
+       self.strength += 5
 class Job:
     def __init__(self):
-        self.salary = random.randint(50, 150)
+        self.salary = random.randint(100, 200)
 class Home:
     def __init__(self):
         self.food = 20
         self.mess = 0
 
 Oleksiy = Human("Oleksiy")
-for day in range(1, 8):
+for day in range(1, 21):
     if not Oleksiy.is_alive():
         break
     Oleksiy.day_life(day)
