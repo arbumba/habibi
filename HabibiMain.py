@@ -25,4 +25,6 @@ class Student:
         return f"I'm a student, my name is {self.name}"
 
 Sofia = Student(name = "Sofia")
+Ivan = Student(name = "Ivan")
 print(Sofia)
+print(Ivan)

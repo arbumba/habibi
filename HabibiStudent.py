@@ -13,22 +13,22 @@ class Student:
     def to_study(self):
         print("Time to study")
         self.progress += 0.25
-        self.gladness -= 3
+        self.gladness -= 5
 
     def to_sleep(self):
         print("Time to sleep")
-        self.gladness += 3
+        self.gladness += 1.5
 
     def to_chill (self):
         print("Resting time")
-        self.gladness += 5
-        self.progress -= 0.1
+        self.gladness += 3.5
+        self.progress -= 0.25
 
     def is_alive(self):
-        if self.progress < -0.5:
+        if self.progress < -1:
             print("You failed your exams")
             self.alive = False
-        elif self.gladness <= -10:
+        elif self.gladness <= -5:
             print("Depression")
             self.alive = False
         elif self.progress > 10 and self.gladness <= 15:
@@ -37,6 +37,7 @@ class Student:
             print("You passed your exams, and you ARE happy")
         else:
             print("You got sent for a second year")
+            self.alive = False
 
     def end_of_day(self):
         print(f"Gladness is {self.gladness}")
