@@ -1,5 +1,5 @@
 import sys
-import requests
+import tkinter
 
 print(sys.executable)
 print(sys.platform)
