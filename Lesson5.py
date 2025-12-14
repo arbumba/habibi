@@ -1,3 +1,12 @@
+import sys
+import requests
+
+print(sys.executable)
+print(sys.platform)
+print(sys.version)
+print(sys.argv) #З'ясовуємор наявні модулі в requests
+
+"""
 import inspect
 import requests
 
@@ -6,6 +15,7 @@ print(inspect.isclass(requests))
 print(inspect.isfunction(requests))
 print(inspect.getmodule(requests.get))
 print(inspect.getmodule(list))
+"""
 
 """
 data = "text"
