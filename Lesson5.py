@@ -1,10 +1,14 @@
 import sys
 import requests
+import tkinter
 
 print(sys.executable)
 print(sys.platform)
 print(sys.version)
-print(sys.argv) #З'ясовуємор наявні модулі в requests
+print(sys.argv)
+#З'ясовуємор наявні модулі
+for module_name, module_path in sys.modules.items():
+    print(module_name, module_path)
 
 """
 import inspect
